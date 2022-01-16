@@ -4,7 +4,7 @@ import java.util.ArrayList;
 public class TabelaHash{
     
     public ArrayList<ArrayList<Contato>> lista; 
-    private int tamanho;
+    int tamanho;
     
     public TabelaHash(){
 

@@ -2,7 +2,6 @@
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.BufferedWriter;
-import java.io.FileWriter;
 import java.util.Scanner;
 import java.util.ArrayList;
 import java.io.*;
@@ -90,7 +89,7 @@ public class Main{
                                     Writer wr = new OutputStreamWriter(os); // criação de um escritor
                                     BufferedWriter br = new BufferedWriter(wr); // adiciono a um escritor de buffer
                                     
-                                    for (int i=0; i<101; i++){
+                                    for (int i=0; i<tabela.tamanho; i++){
                                         if (!tabela.lista.get(i).isEmpty()){
                                             ArrayList<Contato> listaContato = tabela.lista.get(i);
                                            for (int j=0; j<tabela.lista.get(i).size(); j++){
