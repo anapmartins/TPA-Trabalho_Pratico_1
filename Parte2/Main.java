@@ -88,10 +88,11 @@ public class Main{
                                     OutputStream os = new FileOutputStream("Contatos.txt"); // nome do arquivo que será escrito
                                     Writer wr = new OutputStreamWriter(os); // criação de um escritor
                                     BufferedWriter br = new BufferedWriter(wr); // adiciono a um escritor de buffer
-                                    
+                        
                                     for (int i=0; i<tabela.tamanho; i++){
                                         if (!tabela.lista.get(i).isEmpty()){
                                             ArrayList<Contato> listaContato = tabela.lista.get(i);
+
                                            for (int j=0; j<tabela.lista.get(i).size(); j++){
                                                br.write(listaContato.get(j).Nome + ", ");
                                                br.write(listaContato.get(j).Telefone + ", ");
