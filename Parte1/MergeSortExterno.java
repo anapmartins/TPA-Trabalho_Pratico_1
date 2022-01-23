@@ -10,7 +10,8 @@ public class MergeSortExterno{
 
     public ArrayList<Integer> separaArquivo(String nome) throws Exception{
         
-        ArrayList<Integer> lista_arq = new ArrayList<>(); // lista que contem os arquivos ordenados
+        // lista que salva o nome dos arquivos
+        ArrayList<Integer> lista_arq = new ArrayList<>(); 
         BufferedReader br1 = new BufferedReader(new FileReader(nome));
 
         String linha;
@@ -79,11 +80,15 @@ public class MergeSortExterno{
             if (contato1[0].compareTo(contato2[0]) < 0){ 
                 br3.write(linha1); 
                 br3.newLine();
-                linha1 = br1.readLine(); // avanca para a proxima entrada
+                // avanca para a proxima entrada
+                linha1 = br1.readLine(); 
                 if (linha1 != null)
-                    contato1 = linha1.split(","); // atualiza o contato
+                // atualiza o contato
+                    contato1 = linha1.split(","); 
                 
             }
+            // nome da entrada 2 vem antes do nome da entrada 1
+            // ou os nomes são iguais
             else{ 
                 br3.write(linha2); 
                 br3.newLine();

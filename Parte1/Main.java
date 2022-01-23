@@ -7,16 +7,20 @@ public class Main{
         String nome_arquivo = "./15mil.txt";
         
         MergeSortExterno merge = new MergeSortExterno();
-
-        ArrayList<Integer> lista = merge.separaArquivo(nome_arquivo); // separa o arquivo e salva ordenado
+        
+        // separa o arquivo de entrada e salva ordenado
+        ArrayList<Integer> lista = merge.separaArquivo(nome_arquivo); 
 
         while (lista.size() > 1){
-            ArrayList<Integer> lista_prox = new ArrayList<>(); // cria lista com os nomes dos arquivos que foram sendo salvos
+            // cria lista com os nomes dos arquivos que foram sendo salvos
+            ArrayList<Integer> lista_prox = new ArrayList<>(); 
 
             for (int i = 0; i < lista.size() - 1; i += 2)
-                lista_prox.add(merge.merge(lista.get(i), lista.get(i + 1))); // faz o merge entre dois arquivo e salva o nome do arquivo resultante
+            // faz o merge entre dois arquivo e salva o nome do arquivo resultante
+                lista_prox.add(merge.merge(lista.get(i), lista.get(i + 1))); 
             
-            if (lista.size() % 2 != 0) // se a quantidade de arquivos for ímpar, adiciona o que sobra para a proxima iteração
+            // se a quantidade de arquivos for ímpar, adiciona o que sobra para a proxima iteração
+            if (lista.size() % 2 != 0) 
                 lista_prox.add(lista.get(lista.size()-1));
 
             lista = lista_prox;
