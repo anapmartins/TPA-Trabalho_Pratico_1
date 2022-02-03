@@ -3,8 +3,9 @@ import java.util.ArrayList;
 public class Main{
 
     public static void main(String [] args) throws Exception { 
+        long tempo_inicial = System.currentTimeMillis();
 
-        String nome_arquivo = "./15mil.txt";
+        String nome_arquivo = "./AgendaTeste1M.csv";
         
         MergeSortExterno merge = new MergeSortExterno();
         
@@ -25,5 +26,7 @@ public class Main{
 
             lista = lista_prox;
         }
+    long tempo_final = System.currentTimeMillis() - tempo_inicial;
+    System.out.printf("Tempo de Execução: %d\n", (tempo_final / 60000)); // tempo em minutos
     }
 }

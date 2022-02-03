@@ -25,8 +25,8 @@ public class MergeSortExterno{
             contatos.add(contato);
 
             linha = br1.readLine();
-
-            if (contatos.size() >= 10000 || linha == null){
+            // verifica se a lista de contatos tem mais que 10 milhões de elementos ou se chegou ao fim do arquivo
+            if (contatos.size() >= 10000000 || linha == null){
                 // ordena a lista
                 contatos.sort((p1, p2) -> p1.getNome().compareTo(p2.getNome()));
 
